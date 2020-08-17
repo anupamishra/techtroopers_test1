@@ -1,0 +1,42 @@
+$white:  #fff;
+$color1: #2e856e;
+$color2: #f64d52;
+$color3: #083232;
+$bgcolor:#fbfeff;
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.myBtn {
+    display: inline-block;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: .8;
+    i{
+      margin-left: 20px;
+    }
+    &:hover{
+        color: $white;
+        opacity: 1;
+    }
+  }
+  .mtBtnColor1{
+    background-color: $color1;
+  }
+  .mtBtnColor2{
+    background-color: $color2;
+  }
