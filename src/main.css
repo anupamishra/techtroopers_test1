@@ -40,6 +40,25 @@ ul {
   background-color: #f64d52;
 }
 
+.scribble-1 {
+  position: absolute;
+  left: 23px;
+  top: 122px;
+  right: auto;
+  bottom: auto;
+  width: 60px;
+}
+
+.scribble-2 {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: 86px;
+  bottom: -28px;
+  z-index: 20;
+  width: 100px;
+}
+
 * {
   font-family: "DM Sans", sans-serif;
 }
@@ -92,7 +111,7 @@ body {
 .firstBlock {
   padding: 75px 0;
   margin-top: 55px;
-  background: url(../src/images/bg-1.png) top 140px left no-repeat, -webkit-linear-gradient(top, #FFF 0, #F5F5F5 100%);
+  background: url(../src/images/bg-1.png) top 140px left no-repeat, -webkit-linear-gradient(top, #fff 0, #f5f5f5 100%);
 }
 
 .firstBlock .firstBlockRight {
@@ -155,8 +174,8 @@ body {
 
 .topBlock2 .topBlock2Inner {
   padding: 10px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .topBlock2 .topBlock2Inner:hover {
@@ -346,8 +365,8 @@ body {
   border: 1px solid #fff;
   margin-left: 10px;
   cursor: pointer;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .footer-bottom .main .right a:hover {
@@ -407,5 +426,165 @@ body {
 
 .technology .col img {
   max-width: 100px;
+}
+
+.breadcrum {
+  padding: 100px 0;
+  background-color: #083232;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.breadcrum .heading img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.breadcrum .heading p span {
+  color: #fff;
+  background-color: #2e856e;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.breadcrum .heading h1 {
+  font-size: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.contact {
+  padding: 50px 0;
+  background-color: #e4edef;
+}
+
+.contact .heading {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact .heading p {
+  background-color: #2e856e;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.contact .heading h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.contact .ContactForm form .form-group .form-control {
+  min-height: calc(2.5em + 0.75rem + 2px);
+  font-weight: bold;
+  color: #222;
+  font-size: 14px;
+}
+
+.contact .ContactForm form .form-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #212529;
+}
+
+.aboutPage {
+  position: relative;
+  padding: 100px 0;
+}
+
+.aboutPage .careerGrid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aboutPage .careerGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.aboutPage .careerGrid .careerPhoto {
+  position: relative;
+  border-radius: 10px;
+  background-image: url(./images/team-group.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aboutPage .careerGrid .careerBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 600px;
+  padding: 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 10px;
+  background-color: #f64d52;
+}
+
+.aboutPage .careerGrid .careerBlock .flexContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.aboutPage .careerGrid .careerBlock .flexContent span {
+  background-color: #2e856e;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.aboutPage .careerGrid .careerBlock .flexContent h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.aboutPage .careerGrid .careerBlock .flexContent p {
+  color: #fff;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=main.css.map */

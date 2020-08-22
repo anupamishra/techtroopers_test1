@@ -1,4 +1,6 @@
 import React from "react";
+import AOS from 'aos';
+import '../node_modules/aos/dist/aos.css';
 import AboutBlock from "./conponents/AboutBlock";
 import web from "../src/images/img-1.png";
 import web2 from "../src/images/img-2.png";
@@ -19,16 +21,12 @@ import shubham from "../src/images/shubham.jpg";
 import priyanshu from "../src/images/priyanshu.jfif";
 
 const Home = () => {
+  AOS.init();
   return (
     <>
       <AboutBlock 
-      nameh2="All Software &amp; IT Services"
-      nameh1="Beautiful &amp; <span>Creative</span> Solution"
-      text="We specialize in IT and Software Development related services
-      such as Websites, Mobile App, IT Management, Cloud
-      Infrastructure, Blockchain, etc. Our dedicated team strives to
-      place clients’ satisfactory at the first priority and figure
-      out solutions that best fits your demand and nail it."
+      imgsrc={web}
+      visit='/contact'
       />
 
       <section className="secondBlock">
@@ -48,7 +46,7 @@ const Home = () => {
             <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12">
               <div className="row mr-3">
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                  <div className="serviceInner">
+                  <div className="serviceInner" data-aos="flip-up">
                     <img src={apple} className="img-fluid" />
                     <h3>IOS Apps</h3>
                     <p>
@@ -58,7 +56,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                  <div className="serviceInner">
+                  <div className="serviceInner" data-aos="flip-up">
                     <img src={android} className="img-fluid" />
                     <h3>Android Apps</h3>
                     <p>
@@ -68,7 +66,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                  <div className="serviceInner">
+                  <div className="serviceInner" data-aos="flip-up">
                     <img src={website} className="img-fluid" />
                     <h3>Web Based Apps</h3>
                     <p>
@@ -78,7 +76,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                  <div className="serviceInner">
+                  <div className="serviceInner" data-aos="flip-up">
                     <img src={seo} className="img-fluid" />
                     <h3>Web Designing</h3>
                     <p>
@@ -197,47 +195,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="teamBlock">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="heading">
-                <span>Join our global team and enjoy the ride!</span>
-                <h1>
-                Meet Your Colleagues
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-xl-4 col-md-4 col-xs-12">
-              <div className="team">
-                <img className="img-fluid" src={shubham} />
-                <h4>Shubham Rawat</h4>
-                <h6>Founder</h6>
-                <p>"As an designer, I love the technical challenges that come with a fast growing company."</p>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-4 col-xs-12">
-              <div className="team">
-                <img className="img-fluid" src={priyanshu} />
-                <h4>Priyanshu Singh</h4>
-                <h6>CEO</h6>
-                <p>"As an designer, I love the technical challenges that come with a fast growing company."</p>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-4 col-xs-12">
-              <div className="team">
-                <img className="img-fluid" src={anupam} />
-                <h4>Anupam Mishra</h4>
-                <h6>Director</h6>
-                <p>"As an designer, I love the technical challenges that come with a fast growing company."</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <section className="technology">
         <div className="container">
           <div className="row">

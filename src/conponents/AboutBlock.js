@@ -1,7 +1,6 @@
 import React from "react";
-import web from "../images/img-1.svg";
 
-const About = () => {
+const AboutBlock = (props) => {
   return (
     <>
       <section className="firstBlock">
@@ -21,7 +20,7 @@ const About = () => {
                   out solutions that best fits your demand and nail it.
                 </p>
                 <div className="col">
-                  <a className="myBtn mtBtnColor1">
+                  <a to={props.visit} className="myBtn mtBtnColor1">
                     Explore More <i className="fa fa-arrow-right"></i>
                   </a>
                   <a className="myBtn mtBtnColor2">
@@ -31,7 +30,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-12 col-sm-12 order-1 order-lg-1">
-              <img src={web} className="img-fluid" />
+              <img src={props.imgsrc} className="img-fluid"  data-aos="flip-up" />
             </div>
           </div>
         </div>
@@ -40,4 +39,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutBlock;
